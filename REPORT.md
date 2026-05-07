@@ -29,35 +29,35 @@
 ## 4. Qualitative Comparison (5 examples)
 
 ### Example 1
-**Prompt**: Giải thích khái niệm machine learning cho người mới bắt đầu.
-**Base**: Machine learning là một phân khúc của trí tuệ nhân tạo, tập trung vào việc thiết lập các mô hình máy móc để học tập từ dữ liệu...
-**Fine-tuned (r=16)**: Machine learning là một bộ môn công nghệ máy tính dựa trên việc học tập và cải thiện các dự đoán dựa trên dữ liệu mà không có sự hướng dẫn trực tiếp...
-**Nhận xét**: **Improved**. Mô hình Base có xu hướng dịch sát nghĩa từ tiếng Anh khiến câu văn hơi lủng củng. Bản Fine-tuned sử dụng thuật ngữ chuyên ngành tiếng Việt tự nhiên hơn ("bộ môn công nghệ", "hướng dẫn trực tiếp") và có cấu trúc giải thích từ khái quát đến chi tiết, giúp người mới dễ tiếp cận hơn.
+- **Prompt**: Giải thích khái niệm machine learning cho người mới bắt đầu.
+- **Base**: Machine learning là một phân khúc của trí tuệ nhân tạo, tập trung vào việc thiết lập các mô hình máy móc để học tập từ dữ liệu...   
+- **Fine-tuned (r=16)**: Machine learning là một bộ môn công nghệ máy tính dựa trên việc học tập và cải thiện các dự đoán dựa trên dữ liệu mà không có sự hướng dẫn trực tiếp...
+- **Nhận xét**: **Improved**. Mô hình Base có xu hướng dịch sát nghĩa từ tiếng Anh khiến câu văn hơi lủng củng. Bản Fine-tuned sử dụng thuật ngữ chuyên ngành tiếng Việt tự nhiên hơn ("bộ môn công nghệ", "hướng dẫn trực tiếp") và có cấu trúc giải thích từ khái quát đến chi tiết, giúp người mới dễ tiếp cận hơn.
 
 
 ### Example 2
-**Prompt**: Viết đoạn code Python tính số Fibonacci thứ n.
-**Base**: (Code cơ bản, chưa tối ưu về xử lý đầu vào).
-**Fine-tuned (r=16)**: (Code chuyên nghiệp hơn với xử lý ngoại lệ ValueError cho số âm).
-**Nhận xét**: **Improved**. Mô hình sau khi fine-tune không chỉ viết đúng thuật toán mà còn tuân thủ tốt hơn các quy chuẩn Python (PEP8). Đặc biệt, mô hình đã biết thêm phần kiểm tra điều kiện đầu vào (n < 0), điều mà mô hình Base thường bỏ qua. Điều này cho thấy khả năng "Instruction-following" đã được cải thiện rõ rệt.
+- **Prompt**: Viết đoạn code Python tính số Fibonacci thứ n.
+- **Base**: (Code cơ bản, chưa tối ưu về xử lý đầu vào).
+- **Fine-tuned (r=16)**: (Code chuyên nghiệp hơn với xử lý ngoại lệ ValueError cho số âm).
+- **Nhận xét**: **Improved**. Mô hình sau khi fine-tune không chỉ viết đúng thuật toán mà còn tuân thủ tốt hơn các quy chuẩn Python (PEP8). Đặc biệt, mô hình đã biết thêm phần kiểm tra điều kiện đầu vào (n < 0), điều mà mô hình Base thường bỏ qua. Điều này cho thấy khả năng "Instruction-following" đã được cải thiện rõ rệt.
 
 ### Example 3
-**Prompt**: Liệt kê 5 nguyên tắc thiết kế UI/UX.
-**Base**: (Liệt kê chung chung, lặp từ).
-**Fine-tuned (r=16)**: (Các nguyên tắc rõ ràng: Chuyển đổi, Thích ứng, Đơn giản...).
-**Nhận xét**: **Improved**. Mô hình Base liệt kê theo dạng đoạn văn rời rạc. Bản Fine-tuned sử dụng định dạng Bullet points chuyên nghiệp, mỗi nguyên tắc đi kèm với một giải thích ngắn gọn, súc tích. Khả năng "Formatting" này là kết quả trực tiếp của việc học theo template từ dataset Alpaca.
+- **Prompt**: Liệt kê 5 nguyên tắc thiết kế UI/UX.
+- **Base**: (Liệt kê chung chung, lặp từ).
+- **Fine-tuned (r=16)**: (Các nguyên tắc rõ ràng: Chuyển đổi, Thích ứng, Đơn giản...).
+- **Nhận xét**: **Improved**. Mô hình Base liệt kê theo dạng đoạn văn rời rạc. Bản Fine-tuned sử dụng định dạng Bullet points chuyên nghiệp, mỗi nguyên tắc đi kèm với một giải thích ngắn gọn, súc tích. Khả năng "Formatting" này là kết quả trực tiếp của việc học theo template từ dataset Alpaca.
 
 ### Example 4
-**Prompt**: Tóm tắt sự khác biệt giữa LoRA và QLoRA.
-**Base**: (Giải thích còn nhầm lẫn về cơ chế quantization).
-**Fine-tuned (r=16)**: (Phân biệt rõ LoRA là Low-Rank và QLoRA là Quantized LoRA).
-**Nhận xét**: **Improved**.  Đây là câu hỏi khó vì liên quan đến kiến thức mới. Mô hình Base bị "hallucination" (ảo giác) khi cho rằng QLoRA là phiên bản của Quantum Computing. Sau khi fine-tune, mô hình đã định nghĩa đúng QLoRA liên quan đến 4-bit NormalFloat và tối ưu VRAM, chứng tỏ khả năng học hiểu các khái niệm kỹ thuật trong dữ liệu tiếng Việt.
+- **Prompt**: Tóm tắt sự khác biệt giữa LoRA và QLoRA.
+- **Base**: (Giải thích còn nhầm lẫn về cơ chế quantization).
+- **Fine-tuned (r=16)**: (Phân biệt rõ LoRA là Low-Rank và QLoRA là Quantized LoRA).
+- **Nhận xét**: **Improved**. Đây là câu hỏi khó vì liên quan đến kiến thức mới. Mô hình Base bị "hallucination" (ảo giác) khi cho rằng QLoRA là phiên bản của Quantum Computing. Sau khi fine-tune, mô hình đã định nghĩa đúng QLoRA liên quan đến 4-bit NormalFloat và tối ưu VRAM, chứng tỏ khả năng học hiểu các khái niệm kỹ thuật trong dữ liệu tiếng Việt.
 
 ### Example 5
-**Prompt**: Phân biệt prompt engineering, RAG, và fine-tuning.
-**Base**: (Giải thích sơ sài).
-**Fine-tuned (r=16)**: (Phân tích rõ mục đích sử dụng khác nhau của 3 kỹ thuật).
-**Nhận xét**: **Improved**. Bản Fine-tuned trình bày theo dạng so sánh đa chiều: mục đích, chi phí và độ khó triển khai. Câu trả lời của mô hình Base thường bị lặp ý hoặc thiếu sự phân biệt rõ ràng giữa RAG và Fine-tuning.
+- **Prompt**: Phân biệt prompt engineering, RAG, và fine-tuning.
+- **Base**: (Giải thích sơ sài).
+- **Fine-tuned (r=16)**: (Phân tích rõ mục đích sử dụng khác nhau của 3 kỹ thuật).
+- **Nhận xét**: **Improved**. Bản Fine-tuned trình bày theo dạng so sánh đa chiều: mục đích, chi phí và độ khó triển khai. Câu trả lời của mô hình Base thường bị lặp ý hoặc thiếu sự phân biệt rõ ràng giữa RAG và Fine-tuning.
 
 ## 5. Conclusion về Rank Trade-off
 
